@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Website</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+    <div id="header">
+        <div class="container">
+            <nav>
+                <ul  id="sidemenu">
+                    <li><a href="#header"> Home</a></li>
+                    <li><a href="#about"> About</a></li>
+                    <li><a href="#services"> Services</a></li>
+                    <li><a href="#contact"> Contact</a></li>
+                    <i class="fas fa-x" onclick="closemenu()"></i>
+                </ul>
+                <i class="fas fa-bars" onclick="openmenu()"></i>
+            </nav>
+            <div class="header-text">
+                <p>UI/UX Designer</p>
+                <h1>Hi, I'm <span>V.Gopika<br> Unni from Thrissur</h1>
+            </div>
+        </div>
+    </div>
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                    <img src="images/about.JPG" alt="About Me Image">
+                </div>
+                <div class="about-col-2">
+                    <h1 class="sub-title">About Me</h1>
+                    <p>Hi, I'm V Gopika Unni, a passionate BTech Computer Science student at Government Engineering College, Thrissur. With a strong interest in UI/UX design, I focus on crafting visually appealing and user-friendly interfaces. Alongside my technical expertise, I'm skilled in communication and have a knack for coordinating events, bringing creativity and organization to every task I undertake.</p>
+                    <div class="tab-titles">
+                        <p class="tab-links" onclick="opentab('skills')">Skills</p>
+                        <p class="tab-links" onclick="opentab('experience')">Experience</p>
+                        <p class="tab-links" onclick="opentab('education')">Education</p>
+                    </div>
+                    <div class="tab-contents active-tab" id="skills">
+                        <ul>
+                            <li><span>UI/UX</span><br>Designing Web/App Interface</li>
+                            <li><span>Communication</span><br>Good in communicating </li>
+                            <li><span>Coordinating events</span><br>Conducted several events in college</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="experience">
+                        <ul>
+                            <li><span>2024-Current</span><br>Freelance Website Developer</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="education">
+                        <ul>
+                            <li><span>2022-26</span><br>BTech CSE - Govt Engineering college,Thrissur</li>
+                            <li><span>2022</span><br>XII- Nirmala matha central school, Thrissur (97.8%) </li>
+                            <li><span>2020</span><br>X- Nirmala matha central school, Thrissur (95%)</li>
+                        </ul>
+                    </div>
+                </div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="services">
+                <div class="container">
+                    <h1 class="sub-title">My Services</h1>
+                    <div class="services-list">
+                        <div>
+                            <h2>Web Design</h2>
+                            <p>Crafting visually appealing, user-friendly websites that align with your brand's identity. I focus on responsive design, ensuring seamless navigation across all devices, and creating intuitive user experiences that drive engagement and conversion. From layout to aesthetics, every detail is designed to leave a lasting impression.</p>
+                            <a href="#">learn more</a>
+                        </div>
+                        <div>
+                            <h2>UI/UX Design</h2>
+                            <p>Specializing in creating intuitive interfaces and seamless user experiences that prioritize both functionality and aesthetics. I design user-centric solutions that ensure easy navigation and enhance user satisfaction, balancing form and function to create engaging digital products that meet user needs and business goals.</p>
+                            <a href="#">learn more</a>
+                        </div>
+                        <div>
+                            <h2>Tuitions for CBSE Students</h2> 
+                            <p>Offering personalized, focused tuition for CBSE students, ensuring a deep understanding of core subjects. My approach simplifies complex concepts, strengthens problem-solving skills, and prepares students for both board exams and competitive tests with tailored learning plans and individual attention.</p>
+                            <a href="#">learn more</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="contact">
+                <div class="container"> 
+                    <div class="row">
+                        <div class="contact-left">
+                            <h1 class="sub-title">Contact Me</h1>
+                            <p><i class="fas fa-paper-plane"></i>vgopikaunni@gmail.com</p>
+                            <p><i class="fas fa-phone"></i>8921139087</p>
+                        </div>
+                        <div class="contact-right">
+                            <form>
+                                <!-- Separate box for Name -->
+                                <div class="input-box">
+                                    <input type="text" name="Name" placeholder="Your Name" required>
+                                </div>
+                                <!-- Separate box for Email -->
+                                <div class="input-box">
+                                    <input type="email" name="email" placeholder="Your Email" required>
+                                </div>
+                                <!-- Separate box for Message -->
+                                <div class="input-box">
+                                    <textarea name="Message" rows="6" placeholder="Your Message" required></textarea>
+                                </div>
+                                <!-- Submit Button -->
+                                <button type="submit" class="btn btn2">Submit</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+                        
+   <script>
+    var tablinks=document.getElementsByClassName("tab-links");
+    var tabcontents=document.getElementsByClassName("tab-contents");
+
+    function opentab(tabname){
+        for(tablink of tablinks){
+            tablink.classList.remove("active-link");
+        }
+        for(tabcontent of tabcontents){
+            tabcontent.classList.remove("active-tab");
+        }
+   
+    event.currentTarget.classList.add("active-link");
+    document.getElementById(tabname).classList.add("active-tab");
+}
+   </script>  
+   <script>
+    var sidemeu=document.getElementById("sidemenu");
+    function openmenu(){
+        sidemeu.style.right="0";
+    }
+    function closemenu(){
+        sidemeu.style.right="0";
+    }
+
+   </script>   
+</body>
+</html>
